@@ -1,8 +1,7 @@
 import azure.functions as func
-
-from . import visit_counter_app
+from visit_counter import vist_counter_app
 
 app = func.AsgiFunctionApp(
-    app=visit_counter_app,
+    app=vist_counter_app,
     http_auth_level=func.AuthLevel.ANONYMOUS,
 )

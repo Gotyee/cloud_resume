@@ -33,3 +33,11 @@ async def increment_visits():
     # increment_visit_count()
     count = get_visit_count()
     return {"count": count}
+
+
+import azure.functions as func
+
+app = func.AsgiFunctionApp(
+    app=app,
+    http_auth_level=func.AuthLevel.ANONYMOUS,
+)
