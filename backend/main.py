@@ -6,4 +6,4 @@ app = func.AsgiFunctionApp(
     app=visit_counter_app,
     http_auth_level=func.AuthLevel.ANONYMOUS,
 )
-e = 1
+e = 2
