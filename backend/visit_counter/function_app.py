@@ -10,7 +10,7 @@ async def read_visits():
     return {"count": 3}
 
 
-@router.post("/visits/increment")
+@router.post("/increment")
 async def increment_visits():
     return {"increments"}
 
