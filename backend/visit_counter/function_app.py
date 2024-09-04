@@ -11,7 +11,7 @@ container_id = "cloud_resume_db"
 database_id = "cloud_resume_db_id"
 key = "jPyFiP7XYEbZYhLCh5PaJYeP0j7yjndhJ6XjOlRTzakwYKZRPlaYK77tvEY3EKVdZZxyT5vIQlHDACDbFDWrHg=="
 partition_key = "/id"
-client = CosmosClient(endpoint, key)
+client = CosmosClient(url=endpoint, credentials=key)
 database = client.get_database_client(database_id)
 container = database.get_container_client(container_id)
 
