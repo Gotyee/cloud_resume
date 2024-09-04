@@ -1,10 +1,10 @@
 {
-    "azureFunctions.deploySubpath": "backend/visit_counter_third",
+    "azureFunctions.deploySubpath": "backend/visit_counter",
     "azureFunctions.scmDoBuildDuringDeployment": true,
     "azureFunctions.pythonVenv": ".venv",
     "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.projectLanguageModel": 2,
-    "azureFunctions.projectSubpath": "backend/visit_counter_third"
+    "azureFunctions.projectSubpath": "backend/visit_counter"
 }
