@@ -3,8 +3,8 @@ name: Deploy Python project to Azure Function App
 on:
   push:
     branches: ["main"]
-  paths:
-    - 'backend/**'
+    paths:
+      - 'backend/**'
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'backend-cloudresume'   # set this to your function app name on Azure
