@@ -19,7 +19,7 @@ container = database.get_container_client(container_id)
 @router.get("/visits")
 async def read_visits():
     try:
-        return container.read_item("visits", partition_key=partition_key)
+        return container.read_item("visit_counter", partition_key=partition_key)
     except exceptions.CosmosResourceNotFoundError:
         raise HTTPException(status_code=404, detail="Item not found")
 
