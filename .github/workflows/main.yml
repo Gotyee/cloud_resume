@@ -3,7 +3,7 @@ name: Blob storage website CI
 on:
   push:        
     branches: [ main ]
-    
+
 
 jobs:
   build:
@@ -13,6 +13,11 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Delete all files in $web container
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob delete-batch --account-name gotyecrblobstorage --auth-mode key -s '$web'
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
