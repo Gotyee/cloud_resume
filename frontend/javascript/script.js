@@ -14,7 +14,7 @@ function updateVisitCount() {
                 success: function() {
                     // Optionally update the visit count again after increment
                     $.ajax({
-                        url: 'http://127.0.0.1:8000/visits',
+                        url: `${visit_counter_api}/visits`,
                         method: 'GET',
                         success: function(data) {
                             $('#visit-count').text(`Visit Count: ${data.count}`);
