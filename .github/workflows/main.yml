@@ -27,7 +27,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "cdn-gotye-cr" --name "cdn-endpoint-gotyecr" --resource-group "CloudResume"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "cdn-gotye-cr" --name "endpoint-resume-third" --resource-group "CloudResume"
 
   # Azure logout
     - name: logout
