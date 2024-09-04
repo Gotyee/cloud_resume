@@ -1,6 +1,6 @@
 import azure.functions as func
 from azure.cosmos import CosmosClient, exceptions
-from fastapi import APIRouter, FastAPI, HTTPException
+from fastapi import APIRouter, FastAPI
 
 fast_app = FastAPI(root_path="/visit_counter")
 router = APIRouter(prefix="/api", tags=["HmmIMightBeAPI"])
@@ -21,7 +21,7 @@ async def read_visits():
     try:
         return container.read_item("visit_counter", partition_key=partition_key)
     except exceptions.CosmosResourceNotFoundError:
-        raise HTTPException(status_code=404, detail="Item not found")
+        return {"nop"}
 
 
 @router.post("/increment")
