@@ -1,5 +1,5 @@
 function updateVisitCount() {
-    let $visit_counter_api = 'https://backend-cloudresume.azurewebsites.net/api'
+    let visit_counter_api = 'https://backend-cloudresume.azurewebsites.net/api'
     $.ajax({
         url: `${visit_counter_api}/visits`,
         method: 'GET',
