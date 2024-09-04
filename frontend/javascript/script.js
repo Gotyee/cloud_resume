@@ -1,6 +1,7 @@
 function updateVisitCount() {
+    let $visit_counter_api = 'https://backend-cloudresume.azurewebsites.net/api'
     $.ajax({
-        url: 'http://127.0.0.1:8000/visits',
+        url: `${visit_counter_api}/visits`,
         method: 'GET',
         success: function(data) {
             console.log(data)
@@ -8,7 +9,7 @@ function updateVisitCount() {
             
             // Optionally increment the visit count
             $.ajax({
-                url: 'http://127.0.0.1:8000/visits/increment',
+                url: `${visit_counter_api}/increment`,
                 method: 'POST',
                 success: function() {
                     // Optionally update the visit count again after increment
