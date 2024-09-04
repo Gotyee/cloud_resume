@@ -35,6 +35,7 @@ function updateVisitCount() {
     });
 }
 
+
 $(document).ready(function() {
     var $list = $('#technologies-list');  // Select the list
     var $listItems = $list.children('li');    // Get all list items

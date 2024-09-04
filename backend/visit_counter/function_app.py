@@ -12,7 +12,7 @@ async def read_visits():
 
 @router.post("/increment")
 async def increment_visits():
-    return {"increments"}
+    return {"increments success"}
 
 
 fast_app.include_router(router)
