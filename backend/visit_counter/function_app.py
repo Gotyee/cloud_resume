@@ -48,6 +48,8 @@ def _query(container: ContainerProxy, query: str) -> dict:
 
 @router.get("/visits")
 def get_visit_count():
+    container = _connect_to_container()
+    return {"c": container}
     try:
         container = _connect_to_container()
         return {"c": container}
