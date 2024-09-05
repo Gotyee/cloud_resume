@@ -10,14 +10,6 @@ fast_app = FastAPI(root_path="/visit_counter")
 router = APIRouter(prefix="/api", tags=["HmmIMightBeAPI"])
 
 
-endpoint = "https://clpud-resume-glbs.documents.azure.com:443/"
-container_id = "cloud_resume_container"
-database_id = "cloud_resume_database"
-key = "jPyFiP7XYEbZYhLCh5PaJYeP0j7yjndhJ6XjOlRTzakwYKZRPlaYK77tvEY3EKVdZZxyT5vIQlHDACDbFDWrHg=="
-partition_key = "/id"
-client = CosmosClient(url=endpoint, credential=key)
-
-
 # @fast_app.on_event("startup")
 # async def startup_db_client() -> None:
 #     app.client = CosmosClient(url=endpoint, credential=key)
@@ -28,6 +20,12 @@ client = CosmosClient(url=endpoint, credential=key)
 def _connect_to_container(
     container_id: str = environ["COSMOS_CONTAINER"],
 ) -> ContainerProxy:
+    return {
+        "url": environ["COSMOS_ENDPOINT"],
+        "COSMOS_KEY": environ["COSMOS_KEY"],
+        "COSMOS_DB": environ["COSMOS_DB"],
+        "COSMOS_CONTAINER": environ["COSMOS_CONTAINER"],
+    }
     client = CosmosClient(
         url=environ["COSMOS_ENDPOINT"],
         credential=environ["COSMOS_KEY"],
