@@ -50,6 +50,7 @@ def _query(container: ContainerProxy, query: str) -> dict:
 def get_visit_count():
     try:
         container = _connect_to_container()
+        return {"c": container}
         item = _query(
             container=container,
             query='SELECT * FROM c WHERE c.id="visit_counter"',
