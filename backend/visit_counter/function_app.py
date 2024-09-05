@@ -20,12 +20,6 @@ router = APIRouter(prefix="/api", tags=["HmmIMightBeAPI"])
 def _connect_to_container(
     container_id: str = environ["COSMOS_CONTAINER"],
 ) -> ContainerProxy:
-    return {
-        "url": environ["COSMOS_ENDPOINT"],
-        "COSMOS_KEY": environ["COSMOS_KEY"],
-        "COSMOS_DB": environ["COSMOS_DB"],
-        "COSMOS_CONTAINER": environ["COSMOS_CONTAINER"],
-    }
     client = CosmosClient(
         url=environ["COSMOS_ENDPOINT"],
         credential=environ["COSMOS_KEY"],
@@ -48,11 +42,8 @@ def _query(container: ContainerProxy, query: str) -> dict:
 
 @router.get("/visits")
 def get_visit_count():
-    container = _connect_to_container()
-    return {"c": container}
     try:
         container = _connect_to_container()
-        return {"c": container}
         item = _query(
             container=container,
             query='SELECT * FROM c WHERE c.id="visit_counter"',
