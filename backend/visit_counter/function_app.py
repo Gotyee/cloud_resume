@@ -1,7 +1,8 @@
 from datetime import datetime
+from os import environ
 
 import azure.functions as func
-from azure.cosmos import CosmosClient
+from azure.cosmos import ContainerProxy, CosmosClient
 from azure.cosmos.exceptions import CosmosResourceNotFoundError
 from fastapi import APIRouter, FastAPI, HTTPException
 
@@ -24,20 +25,37 @@ client = CosmosClient(url=endpoint, credential=key)
 #     container = await db.get_container_client(container_id).read()
 
 
-@router.get("/visits")
-def get_visit_count() -> dict:
-    try:
-        client = CosmosClient(url=endpoint, credential=key)
-        db = client.get_database_client(database_id)
-        container = db.get_container_client(container_id)
-        item = next(
-            iter(
-                container.query_items(
-                    query='SELECT * FROM c WHERE c.id="visit_counter"',
-                    enable_cross_partition_query=True,
-                ),
+def _connect_to_container(
+    container_id: str = environ["COSMOS_CONTAINER"],
+) -> ContainerProxy:
+    client = CosmosClient(
+        url=environ["COSMOS_ENDPOINT"],
+        credential=environ["COSMOS_KEY"],
+    )
+    db = client.get_database_client(environ["COSMOS_DB"])
+    return db.get_container_client(container_id)
+
+
+def _query(container: ContainerProxy, query: str) -> dict:
+    return next(
+        iter(
+            container.query_items(
+                query=query,
+                enable_cross_partition_query=True,
             ),
-        )  # return type makes var unusable in python if not processed in list before
+        ),
+        # return type makes var unusable in python if not processed in list before
+    )
+
+
+@router.get("/visits")
+def get_visit_count():
+    try:
+        container = _connect_to_container()
+        item = _query(
+            container=container,
+            query='SELECT * FROM c WHERE c.id="visit_counter"',
+        )
 
         return {"count": item["count"]}
 
@@ -48,25 +66,19 @@ def get_visit_count() -> dict:
 
 
 @router.post("/increment")
-def increment_visits():
+def increment_visits() -> None:
     try:
-        client = CosmosClient(url=endpoint, credential=key)
-        db = client.get_database_client(database_id)
-        container = db.get_container_client(container_id)
-
-        item = next(
-            iter(
-                container.query_items(
-                    query='SELECT * FROM c WHERE c.id="visit_counter"',
-                    enable_cross_partition_query=True,
-                ),
-            ),
+        container = _connect_to_container()
+        item = _query(
+            container=container,
+            query='SELECT * FROM c WHERE c.id="visit_counter"',
         )
+
         item["count"] += 1
         item["last_visit_date"] = datetime.now().strftime("%Y-%m-%d")
         container.upsert_item(item)
 
-        return {"success": item}
+        return
 
     except CosmosResourceNotFoundError:
         raise HTTPException(status_code=404, detail="Visit counter not found")
