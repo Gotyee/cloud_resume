@@ -17,7 +17,7 @@ function updateVisitCount() {
                         url: `${visit_counter_api}/visits`,
                         method: 'GET',
                         success: function(data) {
-                            $('#visit-count').text(`Visit Count: ${data.count}`);
+                            $('#count').text(`${data.count}`);
                         },
                         error: function() {
                             console.error('Error fetching updated visit count.');
