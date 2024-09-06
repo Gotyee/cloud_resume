@@ -3253,8 +3253,8 @@ input[type=button].btn-block {
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
 }
-.nav-tabs .nav-item {
-  margin-bottom: -1px;
+.navbar-nav .nav-item {
+  margin-bottom: 1rem;
 }
 .nav-tabs .nav-link {
   border: 1px solid transparent;
@@ -3656,6 +3656,9 @@ input[type=button].btn-block {
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+.nav-link.active {
   color: #fff;
 }
 .navbar-dark .navbar-toggler {
@@ -9463,4 +9466,27 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+#visit-count {
+  display: flex;
+  align-items: center;
+  color: var(--secondary);
+  font: var(--font-family-sans-serif);
+  font-size:1.25rem;
+}
+
+#visit-count i {
+  margin-right: 8px;
+  font-style: normal;
+  font-size:1.75rem;
+}
+
+#visit-count #count {
+  font-weight: bold;
+}
+
+.nav-item hr {
+  margin: 0;
+  background-color: var(--light);
 }

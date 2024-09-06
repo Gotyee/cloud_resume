@@ -27,6 +27,10 @@
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
             crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
         <script src="javascript/script.js"></script>
 
         <!-- Favicons
@@ -46,7 +50,14 @@
         <nav
             class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top d-flex-column"
             id="sideNav">
-            <h3 class="my-1 " id="side-bar-title">Gautier Le Bosse</h3>
+            <div class="d-flex flex-column align-items-center p-2">
+                <h3 class="mb-3 " id="side-bar-title">Gautier Le Bosse</h3>
+                <p id="visit-count" class="pt-2">
+                    <i>&#x1F440;</i> Visitors: <span class="pl-1"
+                        id="count">Loading...</span>
+                </p>
+
+            </div>
 
             <button class="navbar-toggler collapsed" type="button"
                 data-toggle="collapse"
@@ -56,24 +67,24 @@
                     class="navbar-toggler-icon"></span></button>
 
             <div class="navbar-collapse collapse " id="navbarSupportedContent"
-                style>
+                style="flex-direction: column; align-items: center;">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                            href="#about">About</a></li>
+                            href="#about">About</a><hr></li>
                     <li class="nav-item"><a
                             class="nav-link js-scroll-trigger active"
-                            href="#experience">Experience</a></li>
+                            href="#experience">Experience</a><hr></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                            href="#education">Education</a></li>
+                            href="#education">Education</a><hr></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                            href="#skills">Skills</a></li>
+                            href="#skills">Skills</a><hr></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                            href="#certifications">Certifications</a>
+                            href="#certifications">Certifications</a><hr>
                     </li>
-                    <p id="visit-count">Visit Count: Loading...</p>
                 </ul>
 
             </div>
+
         </nav>
         <div class="container-fluid p-0">
             <!-- About Section
@@ -83,7 +94,7 @@
                     <div
                         class="d-flex flex-column  justify-content-between mb-5">
 
-                        <h2>ABOUT ME</h2>
+                        <h2 class="mb-4">ABOUT ME</h2>
 
                         <p> I am Gautier, a dedicated Data Engineer with a
                             proven track record in designing and optimizing
@@ -101,7 +112,7 @@
                             practices. </p>
                         <br>
                         <p>
-                            "I'm excited to leverage my skills in tackling new
+                            I'm excited to leverage my skills in tackling new
                             challenges across various industries, delivering
                             impactful data-driven solutions
                         </p>

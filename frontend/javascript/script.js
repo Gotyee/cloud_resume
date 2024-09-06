@@ -5,7 +5,7 @@ function updateVisitCount() {
         method: 'GET',
         success: function(data) {
             console.log(data)
-            $('#visit-count').text(`Visit Count: ${data.count}`);
+            $('#count').text(`${data.count}`);
             
             // Optionally increment the visit count
             $.ajax({
@@ -35,6 +35,14 @@ function updateVisitCount() {
     });
 }
 
+function setActiveNav() {
+    $(".navbar-nav  .nav-link").on("click", function() {
+        $(".navbar-nav").find(".active").removeClass("active");
+        $(this).addClass("active");
+    });
+ }
+ 
+
 
 $(document).ready(function() {
     var $list = $('#technologies-list');  // Select the list
@@ -49,5 +57,10 @@ $(document).ready(function() {
     $list.append($listItems);
 
     updateVisitCount();
+    setActiveNav();
+
+    $("body").scrollspy({
+        target: "#sideNav",
+    });
 });
 
