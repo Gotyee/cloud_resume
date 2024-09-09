@@ -51,11 +51,15 @@
             class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top d-flex-column"
             id="sideNav">
             <div class="d-flex flex-column align-items-center p-2">
-                <h3 class="mb-3 " id="side-bar-title">Gautier Le Bosse</h3>
-                <p id="visit-count" class="pt-2">
-                    <i>&#x1F440;</i> Visitors: <span class="pl-1"
-                        id="count">Loading...</span>
-                </p>
+                <h3 id="side-bar-title">Gautier Le Bosse</h3>
+                <div class="col mt-3">
+                    <div class="counter d-flex flex-column" id="visit-count">
+                        <i>&#x1F440;</i>
+                        <h2 class="timer count-title count-number" data-to="100"
+                            data-speed="1500" id="count"></h2>
+                        <p class="count-text ">Visit Counter</p>
+                    </div>
+                </div>
 
             </div>
 
@@ -276,39 +280,80 @@
                                 Languages</div>
                             <ul class="list-inline dev-icons">
                                 <li class="list-inline-item">
-                                    <i class="devicon-python-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-python-plain"></i>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            alt="Python icon" />
+                                    </div>
                                     <hr>
                                     <div>Python</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i
-                                        class="devicon-azuresqldatabase-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-azuresqldatabase-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                                    </div>
+
                                     <!--To change someday-->
                                     <hr>
                                     <div>SQL</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-r-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-r-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>R</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-bash-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-bash-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+                                    </div>
                                     <hr>
                                     <div>Bash</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-javascript-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-javascript-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Javascript</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-html5-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-html5-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>HTML</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-css3-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-css3-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>CSS</div>
                                 </li>
@@ -321,92 +366,209 @@
                             <ul class="list-inline dev-icons"
                                 id="technologies-list">
                                 <li class="list-inline-item">
-                                    <i class="devicon-postgresql-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-postgresql-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Postgresql</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-pandas-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-pandas-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Pandas</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-streamlit-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-streamlit-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Streamlit</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-sqlalchemy-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-sqlalchemy-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>SQLAlchemy</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-scikitlearn-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-scikitlearn-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Scikit-learn</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-apacheairflow-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-apacheairflow-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Airflow</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-git-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-git-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Git</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-numpy-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-numpy-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Numpy</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-azure-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-azure-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Azure</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-docker-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-docker-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Docker</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-jquery-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-jquery-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>JQuery</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-poetry-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-poetry-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/poetry/poetry-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Poetry</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-plotly-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-plotly-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Plotly</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-tensorflow-original"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-tensorflow-original"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Tensorflow</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-bootstrap-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-bootstrap-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Bootstrap</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-apachespark-original"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-apachespark-original"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>PySpark</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-pytest-plain"></i>
+                                    <div class="icon-container">
+                                        <i class="devicon-pytest-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>Pytest</div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <i class="devicon-fastapi-plain"></i>
+                                    <div class="icon-container">
+                                        <i
+                                            class="devicon-fastapi-plain"></i>
+
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" />
+                                    </div>
+
                                     <hr>
                                     <div>FastApi</div>
                                 </li>
@@ -416,6 +578,7 @@
                                 </li>
 
                             </ul>
+
                         </div> <!-- Technologies End-->
                         <div id="methodologies">
                             <div class="subheading mb-3">Methodologies</div>
@@ -430,7 +593,8 @@
                                         viewBox="0 0 448 512"
                                         data-fa-i2svg><path
                                             d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
-                                    <b>Agile Methodologies:</b>&nbsp;Proficient
+                                    <b>Agile
+                                        Methodologies:</b>&nbsp;Proficient
                                     in Scrum framework
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -443,7 +607,8 @@
                                         viewBox="0 0 448 512"
                                         data-fa-i2svg><path
                                             d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
-                                    <b>CI/CD:</b>&nbsp;Experienced in continuous
+                                    <b>CI/CD:</b>&nbsp;Experienced in
+                                    continuous
                                     integration and continuous delivery
                                     pipelines, automating code deployment.
                                 </li>
@@ -458,7 +623,8 @@
                                         data-fa-i2svg><path
                                             d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
                                     <b>Test-Driven Development
-                                        (TDD):</b>&nbsp;Skilled in writing tests
+                                        (TDD):</b>&nbsp;Skilled in writing
+                                    tests
                                     before code to ensure quality and
                                     functionality.
                                 </li>
@@ -579,7 +745,8 @@
                                             d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
                                     <a
                                         href="https://courses.edx.org/certificates/2b31cf19ed664397abd2d2286daf3da6">MITx
-                                        - Data Analysis: Statistical Modeling
+                                        - Data Analysis: Statistical
+                                        Modeling
                                         and
                                         Computation in Applications</a>
                                 </li>
@@ -596,7 +763,8 @@
                                             d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
                                     <a
                                         href="https://badgelist.com/HL7/HL7-FHIR-Proficient/u/Gotye2">HL7
-                                        International - HL7 FHIR Proficient</a>
+                                        International - HL7 FHIR
+                                        Proficient</a>
                                 </li>
 
                             </ul>

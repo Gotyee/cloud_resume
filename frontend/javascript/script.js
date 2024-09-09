@@ -17,7 +17,7 @@ function updateVisitCount() {
                         url: `${visit_counter_api}/visits`,
                         method: 'GET',
                         success: function(data) {
-                            $('#visit-count').text(`Visit Count: ${data.count}`);
+                            $('#count').text(`${data.count}`);
                         },
                         error: function() {
                             console.error('Error fetching updated visit count.');
@@ -42,7 +42,13 @@ function setActiveNav() {
     });
  }
  
-
+ function toggleVcount() {
+    if ($('#navbarSupportedContent').is(':visible')) {
+      $('#visit-count').css('display', 'block');
+    } else {
+      $('#visit-count').attr('style', 'display: none !important;');
+    }
+  }
 
 $(document).ready(function() {
     var $list = $('#technologies-list');  // Select the list
@@ -58,9 +64,12 @@ $(document).ready(function() {
 
     updateVisitCount();
     setActiveNav();
+    $(window).on('resize', toggleVcount);
 
     $("body").scrollspy({
         target: "#sideNav",
     });
+
+    
 });
 
