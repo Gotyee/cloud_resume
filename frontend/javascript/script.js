@@ -42,7 +42,13 @@ function setActiveNav() {
     });
  }
  
-
+ function toggleVcount() {
+    if ($('#navbarSupportedContent').is(':visible')) {
+      $('#visit-count').css('display', 'block');
+    } else {
+      $('#visit-count').attr('style', 'display: none !important;');
+    }
+  }
 
 $(document).ready(function() {
     var $list = $('#technologies-list');  // Select the list
@@ -58,9 +64,12 @@ $(document).ready(function() {
 
     updateVisitCount();
     setActiveNav();
+    $(window).on('resize', toggleVcount);
 
     $("body").scrollspy({
         target: "#sideNav",
     });
+
+    
 });
 
