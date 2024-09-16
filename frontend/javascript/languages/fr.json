@@ -9,8 +9,10 @@
     "about-description-3": "Motivé par les défis techniques, je suis prêt à mettre mon expertise au service de projets ambitieux, en fournissant des solutions à fort impact dans des secteurs variés.",
 
     "languages-title": "Langues",
-    "languages-french": "Français : Langue maternelle",
-    "languages-english": "Anglais : Bilingue (TOEIC - 990/990)",
+    "languages-french": "Français : ",
+    "languages-french-level": "Langue maternelle",
+    "languages-english": "Anglais : ",
+    "languages-english-level": "Bilingue (TOEIC - 990/990)",
   
     "experience-sancare-dates": "2022-Présent",
     "experience-sancare-point-1": "Conception et maintenance de pipelines de données Python dans un environnement Docker, optimisant les processus ETL pour l'extraction de données médicales.",
@@ -32,7 +34,7 @@
     "education-esme-major": "Majeure : Science des Données",
     "education-esme-specialization": "Spécialisation en Santé Numérique",
     
-    "programming-languages-title":"Languages de Programmation",
+    "programming-languages-title":"Langages de Programmation",
     "technologies-title":"Technologies et bibliothéques",
     "methodologies-title": "Méthodologies",
     "methodologies-agile-title": "Méthodologies Agile :",

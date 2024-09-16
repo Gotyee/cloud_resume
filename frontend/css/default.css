@@ -10265,15 +10265,15 @@ section.resume-section .resume-section-content {
 }
 
 .counter {
-  background-color:#f5f5f5;
-  padding: 10px 0;
+  background-color: var(--white);
+  padding: 5px 0;
   border-radius: 5px;
   margin-top: 1rem;
 
 }
 
 .count-title {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: normal;
   margin-top: 10px;
   margin-bottom: 0;
@@ -10281,7 +10281,7 @@ section.resume-section .resume-section-content {
 }
 
 .count-text {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: normal;
   margin-top: 10px;
   margin-bottom: 0;

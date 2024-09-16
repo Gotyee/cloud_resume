@@ -5,10 +5,13 @@
     "about-description-1": "I am Gautier, a dedicated Data Engineer with a proven track record in designing and optimizing scalable data pipelines. With strong expertise in Python, SQL, and Pandas, I specialize in transforming complex datasets into actionable insights.",
     "about-description-2": "I have successfully led the development and maintenance of robust ETL processes, ensuring data integrity and efficiency across diverse environments. As a proactive problem-solver, I thrive in collaborative Agile teams, continuously seeking to refine and innovate data engineering practices.",
     "about-description-3": "I'm excited to leverage my skills in tackling new challenges across various industries, delivering impactful data-driven solutions.",
+    
     "languages-title": "Languages",
-    "languages-french": "French: Native",
-    "languages-english": "English: Fluent (Passed TOEIC exam with 990/990 score)",
-  
+    "languages-french": "French: ",
+    "languages-french-level": "Native",
+    "languages-english": "English: ",
+    "languages-english-level": "Fluent (Passed TOEIC exam with 990/990 score)",
+
     "experience-sancare-dates": "2022-Present",
     "experience-sancare-point-1": "Spearheaded the design and upkeep of Python data pipelines in a Docker environment, optimizing ETL processes for medtech data extraction.",
     "experience-sancare-point-2": "Proactively led code refactoring to enhance efficiency, scalability, and maintainability of data pipelines, leveraging Pandas, Python, and SQL. Ensured adherence to PEP8 standards and SOLID principles.",
