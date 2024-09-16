@@ -519,7 +519,7 @@ mark,
   margin-left: 0.5rem;
 }
 
-.list-inline-item:hover i {
+.dev-icons .list-inline-item:hover i {
   display: none;
 }
 
