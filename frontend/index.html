@@ -50,17 +50,19 @@
         <nav
             class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top d-flex-column"
             id="sideNav">
-            <div class="d-flex flex-column align-items-center p-2">
-                <h3 id="side-bar-title">Gautier Le Bosse</h3>
-                <div class="col mt-3">
+            <div class="d-flex-column mb-0">
+                <div class="d-flex align-items-center p-2">
+                    <h3 id="side-bar-title" class="mb-0">Gautier Le Bosse</h3>
+                </div>
+                <div class="col align-items-top">
                     <div class="counter d-flex flex-column" id="visit-count">
                         <i>&#x1F440;</i>
                         <h2 class="timer count-title count-number" data-to="100"
                             data-speed="1500" id="count"></h2>
-                        <p class="count-text ">Visit Counter</p>
+                        <p class="count-text" id="visit-counter">Visit
+                            Counter</p>
                     </div>
                 </div>
-
             </div>
 
             <button class="navbar-toggler collapsed" type="button"
@@ -70,23 +72,36 @@
                 aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
 
-            <div class="navbar-collapse collapse " id="navbarSupportedContent"
+            <div class="navbar-collapse collapse mt-auto align-self-center"
+                id="navbarSupportedContent"
                 style="flex-direction: column; align-items: center;">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                            href="#about">About</a><hr></li>
+                            href="#about" id="nav-about">About</a><hr></li>
                     <li class="nav-item"><a
                             class="nav-link js-scroll-trigger active"
                             href="#experience">Experience</a><hr></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                            href="#education">Education</a><hr></li>
+                            href="#education"
+                            id="education-title">Education</a><hr></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
                             href="#skills">Skills</a><hr></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger"
                             href="#certifications">Certifications</a><hr>
                     </li>
                 </ul>
-
+            </div>
+            <div class="btn-group btn-group-toggle w-100 mt-auto"
+                data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options"
+                        id="english-option" checked> English
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options"
+                        id="french-option" autocomplete="off">
+                    French
+                </label>
             </div>
 
         </nav>
@@ -98,16 +113,18 @@
                     <div
                         class="d-flex flex-column  justify-content-between mb-5">
 
-                        <h2 class="mb-4">ABOUT ME</h2>
+                        <h2 class="mb-4" id="about-title">ABOUT ME</h2>
 
-                        <p> I am Gautier, a dedicated Data Engineer with a
+                        <p id="about-description-1"> I am Gautier, a dedicated
+                            Data Engineer with a
                             proven track record in designing and optimizing
                             scalable data pipelines. With strong expertise in
                             Python, SQL, and Pandas, I specialize in
                             transforming complex datasets into actionable
                             insights. </p>
                         <br>
-                        <p> I have successfully led the development
+                        <p id="about-description-2"> I have successfully led the
+                            development
                             and maintenance of robust ETL processes, ensuring
                             data integrity and efficiency across diverse
                             environments. As a proactive problem-solver, I
@@ -115,17 +132,11 @@
                             seeking to refine and innovate data engineering
                             practices. </p>
                         <br>
-                        <p>
+                        <p id="about-description-3">
                             I'm excited to leverage my skills in tackling new
                             challenges across various industries, delivering
                             impactful data-driven solutions
                         </p>
-                        <div class="subheading mb-3">Languages</div>
-                        <ul>
-                            <li>French : Native</li>
-                            <li>English : Fluent (Passed TOEIC exam with 990/990
-                                score)</li>
-                        </ul>
 
                     </div>
                 </div>
@@ -155,32 +166,33 @@
 
                         <div class="subheading mb-3">Sancare</div>
                         <ul>
-                            <li>Spearheaded the design and upkeep of
-                                <b>Python</b>
-                                data pipelines in a <b>Docker</b>
-                                environment,
-                                optimizing ETL processes for medtech
-                                data
-                                extraction.</li>
-                            <li>Proactively led code refactoring to
+                            <li id="experience-sancare-point-1">Spearheaded the
+                                design and upkeep of Python data pipelines in a
+                                Docker environment, optimizing ETL processes for
+                                medtech data extraction.</li>
+                            <li id="experience-sancare-point-2">Proactively led
+                                code refactoring to
                                 enhance
                                 efficiency, scalability, and
                                 maintainability
-                                of data pipelines, leveraging <b>Pandas</b>,
-                                Python, and <b>SQL</b>. Ensured adherence to
+                                of data pipelines, leveraging Pandas,
+                                Python, and SQL. Ensured adherence to
                                 PEP8
-                                standards and <b>SOLID</b> principles.</li>
-                            <li>Collaborated closely with
+                                standards and SOLID principles.</li>
+                            <li id="experience-sancare-point-3">Collaborated
+                                closely with
                                 cross-functional
-                                <b>Agile</b> teams to translate complex
+                                Agile teams to translate complex
                                 medical
                                 data requirements into actionable
                                 insights</li>
-                            <li>Ensured compliance with healthcare data
+                            <li id="experience-sancare-point-4">Ensured
+                                compliance with healthcare data
                                 standards (FHIR, OMOP-CDM),enhancing
                                 data interoperability and
                                 management.</li>
-                            <li>Played a key role in troubleshooting and
+                            <li id="experience-sancare-point-5">Played a key
+                                role in troubleshooting and
                                 resolving data-related issues, improving
                                 data integrity and quality. Actively
                                 monitored and integrated new
@@ -197,7 +209,8 @@
                         <div class="d-flex flex-md-row align-items-center">
                             <div class="flex-grow-1">
 
-                                <h3>Data Scientist (Intern)</h3>
+                                <h3 id="experience-foch-title">Data Scientist
+                                    (Intern)</h3>
 
                             </div>
                             <div class="d-inline-flex">
@@ -206,28 +219,35 @@
                             </div>
                         </div>
 
-                        <div class="subheading mb-3">Foch Hospital</div>
+                        <div class="subheading mb-3"
+                            id="xperience-foch-company">Foch Hospital</div>
                         <ul>
-                            <li>Developed a digitized data collection tool
+                            <li id="experience-foch-point-1">Developed a
+                                digitized data collection tool
                                 for
                                 improving ENT consultations using
-                                <b>JavaScript,
-                                    HTML,
-                                    CSS,</b> and Python backend.</li>
-                            <li>Implemented <b>machine learning</b>
+                                JavaScript,
+                                HTML,
+                                CSS, and Python backend.</li>
+                            <li id="experience-foch-point-2">Implemented
+                                Machine Learning
                                 clustering to
                                 identify
                                 patient groups, enhancing data-driven
                                 decision-making.</li>
-                            <li>Performed extensive data preprocessing,
+                            <li id="experience-foch-point-3">Performed extensive
+                                data preprocessing,
                                 including
                                 cleaning and normalization, ensuring
                                 high-quality
                                 analysis.</li>
-                            <li>Contributed to a <b>scientific
-                                    publication</b> based on
-                                the
-                                project outcomes. (Check it out here => <a
+                            <li><div id="experience-foch-point-4">Contributed to
+                                    a
+                                    scientific
+                                    publication based on
+                                    the
+                                    project outcomes. (Check it out here =>
+                                </div><a
                                     class="u-link"
                                     href="https://doi.org/10.1007/s00405-022-07520-6">Usefulness,
                                     acceptance, and
@@ -251,7 +271,8 @@
                         id="esme">
                         <div class="d-flex flex-md-row align-items-center">
                             <div class="flex-grow-1">
-                                <h3 class="mb-0">ESME (Special School of
+                                <h3 class="mb-0" id="education-esme-title">ESME
+                                    (Special School of
                                     Mechanics
                                     and
                                     Electricity)</h3>
@@ -262,10 +283,12 @@
 
                             </div>
                         </div>
-                        <div class="subheading mb-3">Master of Science (French
+                        <div class="subheading mb-3"
+                            id="education-esme-degree">Master of Science (French
                             Engineer Degree)</div>
                         <div>Major: Data Science</div>
-                        <div>Specialisation in Digital Health</div>
+                        <div id="education-esme-specialization">Specialisation
+                            in Digital Health</div>
 
                     </div>
                 </section> <!-- End Education -->
@@ -276,7 +299,7 @@
                     <div class="resume-section-content">
                         <h2 class="mb-5">Skills</h2>
                         <div id="programming-languages">
-                            <div class="subheading mb-3">Programming
+                            <div class="subheading mb-3" id="programming-languages-title">Programming
                                 Languages</div>
                             <ul class="list-inline dev-icons">
                                 <li class="list-inline-item">
@@ -361,7 +384,7 @@
                             </ul>
                         </div> <!-- Programming Languages End-->
                         <div id="Technologies">
-                            <div class="subheading mb-3">Technologies and
+                            <div class="subheading mb-3" id="technologies-title">Technologies and
                                 Librairies</div>
                             <ul class="list-inline dev-icons"
                                 id="technologies-list">
@@ -581,7 +604,8 @@
 
                         </div> <!-- Technologies End-->
                         <div id="methodologies">
-                            <div class="subheading mb-3">Methodologies</div>
+                            <div class="subheading mb-3"
+                                id="methodologies-title">Methodologies</div>
                             <ul class="fa-ul mb-0">
                                 <li class="d-flex align-items-center">
                                     <svg
@@ -593,9 +617,10 @@
                                         viewBox="0 0 448 512"
                                         data-fa-i2svg><path
                                             d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
-                                    <b>Agile
-                                        Methodologies:</b>&nbsp;Proficient
-                                    in Scrum framework
+                                    <b id="methodologies-agile-title">Agile
+                                        Methodologies:</b>&nbsp;<div
+                                        id="methodologies-agile">Proficient
+                                        in Scrum framework</div>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <svg
@@ -607,10 +632,12 @@
                                         viewBox="0 0 448 512"
                                         data-fa-i2svg><path
                                             d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
-                                    <b>CI/CD:</b>&nbsp;Experienced in
-                                    continuous
-                                    integration and continuous delivery
-                                    pipelines, automating code deployment.
+                                    <b>CI/CD:</b>&nbsp;<div
+                                        id="methodologies-cicd">Experienced in
+                                        continuous
+                                        integration and continuous delivery
+                                        pipelines, automating code
+                                        deployment.</div>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <svg
@@ -622,11 +649,13 @@
                                         viewBox="0 0 448 512"
                                         data-fa-i2svg><path
                                             d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-li fa fa-trophy text-warning"></i> -->
-                                    <b>Test-Driven Development
-                                        (TDD):</b>&nbsp;Skilled in writing
-                                    tests
-                                    before code to ensure quality and
-                                    functionality.
+                                    <b id="methodologies-tdd-title">Test-Driven
+                                        Development
+                                        (TDD):</b>&nbsp;
+                                    <div id="methodologies-tdd"> in writing
+                                        tests
+                                        before code to ensure quality and
+                                        functionality.</div>
                                 </li>
                             </div> <!-- Methodologies End-->
                         </div> <!-- Skills End-->

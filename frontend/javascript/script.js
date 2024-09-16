@@ -40,15 +40,46 @@ function setActiveNav() {
         $(".navbar-nav").find(".active").removeClass("active");
         $(this).addClass("active");
     });
- }
+}
  
- function toggleVcount() {
+function toggleVcount() {
     if ($('#navbarSupportedContent').is(':visible')) {
       $('#visit-count').css('display', 'block');
     } else {
       $('#visit-count').attr('style', 'display: none !important;');
     }
-  }
+}
+
+function loadLanguage(lang) {
+    $.getJSON(`javascript/languages/${lang}.json`, function (data) {
+        // Iterate over each key-value pair in the JSON data
+        $.each(data, function (key, value) {
+            // Check if the key corresponds to an element's ID or class
+            let $element = $('#' + key);
+            if ($element.length) {
+                // Replace text nodes within the element
+                $element.html(value);
+            }
+        });
+        var wordsToBold = [
+            'Python', 'Pandas', 'SQL', 'SOLID', 'PEP8', 'FHIR','OMOP-CDM', 'HTML',
+            'Javascript', 'CSS', 'Machine Learning'
+        ];
+
+        boldWords('experience', wordsToBold);
+    });
+}
+
+function boldWords(divId, words) {
+    var $div = $('#' + divId);
+    var html = $div.html();
+    words.forEach(function(word) {
+        html = html.replaceAll(word, '<b>'+word+'</b>');
+    });
+    $div.html(html);
+
+}
+
 
 $(document).ready(function() {
     var $list = $('#technologies-list');  // Select the list
@@ -68,6 +99,19 @@ $(document).ready(function() {
 
     $("body").scrollspy({
         target: "#sideNav",
+    });
+
+    let currentLang = 'en';
+
+    // Load the default language when the page loads
+    loadLanguage(currentLang);
+    $('input[type="radio"]').change(function () {
+        if (this.id === 'english-option') {
+            currentLang = 'en';
+        } else if (this.id === 'french-option') {
+            currentLang = 'fr';
+        }
+        loadLanguage(currentLang);
     });
 
     

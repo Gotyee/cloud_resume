@@ -1,0 +1,41 @@
+{
+    "visit-counter": "Visit Counter",
+    "nav-about": "About",
+    "about-title": "ABOUT ME",
+    "about-description-1": "I am Gautier, a dedicated Data Engineer with a proven track record in designing and optimizing scalable data pipelines. With strong expertise in Python, SQL, and Pandas, I specialize in transforming complex datasets into actionable insights.",
+    "about-description-2": "I have successfully led the development and maintenance of robust ETL processes, ensuring data integrity and efficiency across diverse environments. As a proactive problem-solver, I thrive in collaborative Agile teams, continuously seeking to refine and innovate data engineering practices.",
+    "about-description-3": "I'm excited to leverage my skills in tackling new challenges across various industries, delivering impactful data-driven solutions.",
+    "languages-title": "Languages",
+    "languages-french": "French: Native",
+    "languages-english": "English: Fluent (Passed TOEIC exam with 990/990 score)",
+  
+    "experience-sancare-dates": "2022-Present",
+    "experience-sancare-point-1": "Spearheaded the design and upkeep of Python data pipelines in a Docker environment, optimizing ETL processes for medtech data extraction.",
+    "experience-sancare-point-2": "Proactively led code refactoring to enhance efficiency, scalability, and maintainability of data pipelines, leveraging Pandas, Python, and SQL. Ensured adherence to PEP8 standards and SOLID principles.",
+    "experience-sancare-point-3": "Collaborated closely with cross-functional Agile teams to translate complex medical data requirements into actionable insights.",
+    "experience-sancare-point-4": "Ensured compliance with healthcare data standards (FHIR, OMOP-CDM), enhancing data interoperability and management.",
+    "experience-sancare-point-5": "Played a key role in troubleshooting and resolving data-related issues, improving data integrity and quality. Actively monitored and integrated new technologies to enhance the data engineering stack's efficiency.",
+  
+    "experience-foch-title": "Data Scientist (Intern)",
+    "experience-foch-company": "Foch Hospital",
+    "experience-foch-point-1": "Developed a digitized data collection tool for improving ENT consultations using JavaScript, HTML, CSS, and Python backend.",
+    "experience-foch-point-2": "Implemented Machine Learning clustering to identify patient groups, enhancing data-driven decision-making.",
+    "experience-foch-point-3": "Performed extensive data preprocessing, including cleaning and normalization, ensuring high-quality analysis.",
+    "experience-foch-point-4": "Contributed to a scientific publication based on the project outcomes. (Check it out here) =>",
+    
+    "education-title": "Education",
+    "education-esme-title": "ESME (Special School of Mechanics and Electricity)",
+    "education-esme-degree": "Master of Science (French Engineer Degree)",
+    "education-esme-major": "Major: Data Science",
+    "education-esme-specialization": "Specialisation in Digital Health",
+    
+    "programming-languages-title":"Programming Languages",
+    "technologies-title":"Technologies and Librairies",
+    "methodologies-title": "Methodologies",
+    "methodologies-agile-title": "Agile Methodologies:",
+    "methodologies-agile": "Proficient in Scrum framework",
+    "methodologies-cicd": "Experienced in continuous integration and continuous delivery pipelines, automating code deployment.",
+    "methodologies-tdd-title": "Test-Driven Development (TDD):",
+    "methodologies-tdd":"Skilled in writing tests before code to ensure quality and functionality."
+  }
+  

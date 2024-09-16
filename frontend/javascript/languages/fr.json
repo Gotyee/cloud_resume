@@ -1,0 +1,44 @@
+{
+    "side-bar-title": "Gautier Le Bosse",
+    "visit-counter": "Nombre de vues",
+    "nav-about": "À Propos",
+    "about-title": "À PROPOS DE MOI",
+
+    "about-description-1": "Ingénieur de données passionné, avec une expertise approfondie dans la création de pipelines de données robustes et évolutifs. Maîtrisant Python, SQL, Pandas et diverses autres technologies, je suis capable de transformer des données complexes en informations stratégiques exploitables.",
+    "about-description-2": "Fort d'une expérience dans des environnements Agile, je m'efforce constamment d'améliorer l'efficacité des processus, de garantir la qualité des données et de répondre aux enjeux critiques de l'entreprise à travers des solutions innovantes.",
+    "about-description-3": "Motivé par les défis techniques, je suis prêt à mettre mon expertise au service de projets ambitieux, en fournissant des solutions à fort impact dans des secteurs variés.",
+
+    "languages-title": "Langues",
+    "languages-french": "Français : Langue maternelle",
+    "languages-english": "Anglais : Bilingue (TOEIC - 990/990)",
+  
+    "experience-sancare-dates": "2022-Présent",
+    "experience-sancare-point-1": "Conception et maintenance de pipelines de données Python dans un environnement Docker, optimisant les processus ETL pour l'extraction de données médicales.",
+    "experience-sancare-point-2": "Refactorisation proactive du code pour améliorer l'efficacité, l'évolutivité et la maintenabilité des pipelines en utilisant Python, Pandas et SQL, tout en respectant les normes PEP8 et les principes SOLID.",
+    "experience-sancare-point-3": "Collaboration étroite avec des équipes Agile interfonctionnelles pour traduire des exigences médicales complexes en données exploitables.",
+    "experience-sancare-point-4": "Respect strict des normes de données médicales (FHIR, OMOP-CDM) pour améliorer l'interopérabilité et la gestion des données.",
+    "experience-sancare-point-5": "Rôle clés dans la résolution des problèmes critiques, garantissant une intégrité et une qualité optimale. Pro-actif sur les sujets de veille technologique d'intégration de nouvelles solutions pour optimiser l'efficacité et la performance des pipelines.",
+  
+    "experience-foch-title": "Data Scientist (Stagiaire)",
+    "experience-foch-company": "Hôpital Foch",
+    "experience-foch-point-1": "Développement d'un outil de collecte de données numérisé pour les consultations ORL, en utilisant JavaScript, HTML, CSS et un backend Python.",
+    "experience-foch-point-2": "Mise en œuvre de Machine Learning pour le regroupement de patients, améliorant ainsi la prise de décision basée sur les données.",
+    "experience-foch-point-3": "Prétraitement des données : nettoyage et normalisation, garantissant une analyse de haute qualité.",
+    "experience-foch-point-4": "Contribution à une publication scientifique basée sur les résultats du projet. (Lien juste ici =>)",
+    
+    "education-title": "Éducation",
+    "education-esme-title": "ESME (École Spéciale de Mécanique et d'Électricité)",
+    "education-esme-degree": "Master of Science (Diplôme d'Ingénieur Français)",
+    "education-esme-major": "Majeure : Science des Données",
+    "education-esme-specialization": "Spécialisation en Santé Numérique",
+    
+    "programming-languages-title":"Languages de Programmation",
+    "technologies-title":"Technologies et bibliothéques",
+    "methodologies-title": "Méthodologies",
+    "methodologies-agile-title": "Méthodologies Agile :",
+    "methodologies-agile": "Compétent dans le cadre Scrum.",
+    "methodologies-cicd": "Expérimenté dans les pipelines d'intégration et de déploiement continus, automatisant le déploiement de code.",
+    "methodologies-tdd-title": "Développement piloté par les tests (TDD) :",
+    "methodologies-tdd": "Compétent dans l'écriture de tests avant le code pour assurer la qualité et la fonctionnalité."
+}
+  
